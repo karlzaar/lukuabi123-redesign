@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lukuabi123 | Kiire Lukusepateenus Tallinnas</title>
+    <meta name="description" content="Lukuabi123 - professionaalne lukusepateenus Tallinnas ja Harjumaal. Lukuavamine, paigaldamine ja remont. 24/7 kiirabi lukudega.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2C3E50;
+            --primary-dark: #1A252F;
+            --primary-light: #34495E;
+            --accent: #E74C3C;
+            --accent-light: #F39C12;
+            --dark: #1A1A2E;
+            --light: #F8F9FA;
+            --white: #FFFFFF;
+            --text: #2C3E50;
+            --text-light: #7F8C8D;
+            --success: #27AE60;
+            --warning: #F39C12;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .emergency-btn {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .emergency-btn:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lang-switcher a {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            color: var(--text-light);
+        }
+
+        .lang-switcher a.active {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 8rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .emergency-info {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 600px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .emergency-phone {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-hours {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .feature h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .feature p {
+            color: var(--text-light);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 6rem 0;
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: var(--accent);
+            width: 30px;
+        }
+
+        .contact-item h4 {
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-item p {
+            color: var(--text-light);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #E0E0E0;
+            border-radius: 10px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .submit-btn {
+            background: var(--gradient);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--white);
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1rem;
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .emergency-phone {
+                font-size: 1.5rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+        }
+
+        /* Language specific content */
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        /* Emergency banner */
+        .emergency-banner {
+            background: var(--accent);
+            color: var(--white);
+            text-align: center;
+            padding: 0.5rem;
+            font-weight: 500;
+        }
+
+        .emergency-banner a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .emergency-banner a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <span class="lang-content active" data-lang="et">🚨 Kiire lukuabi: <a href="tel:+37253666018">+372 53 666 018</a> • Avatud E-R 9:00-17:00</span>
+        <span class="lang-content" data-lang="ru">🚨 Срочная слесарная помощь: <a href="tel:+37253666018">+372 53 666 018</a> • Открыто Пн-Пт 9:00-17:00</span>
+        <span class="lang-content" data-lang="en">🚨 Emergency Locksmith: <a href="tel:+37253666018">+372 53 666 018</a> • Open Mon-Fri 9:00-17:00</span>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-key"></i>
+                    <span class="lang-content active" data-lang="et">Lukuabi123</span>
+                    <span class="lang-content" data-lang="ru">Слесарь123</span>
+                    <span class="lang-content" data-lang="en">LockHelp123</span>
+                </a>
+
+                <ul class="nav-links">
+                    <li>
+                        <a href="#services">
+                            <span class="lang-content active" data-lang="et">Teenused</span>
+                            <span class="lang-content" data-lang="ru">Услуги</span>
+                            <span class="lang-content" data-lang="en">Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="lang-content active" data-lang="et">Meist</span>
+                            <span class="lang-content" data-lang="ru">О нас</span>
+                            <span class="lang-content" data-lang="en">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            <span class="lang-content active" data-lang="et">Kontakt</span>
+                            <span class="lang-content" data-lang="ru">Контакты</span>
+                            <span class="lang-content" data-lang="en">Contact</span>
+                        </a>
+                    </li>
+                    <li class="lang-switcher">
+                        <a href="#" onclick="switchLanguage('et')" class="active" data-lang-btn="et">EST</a>
+                        <a href="#" onclick="switchLanguage('ru')" data-lang-btn="ru">РУС</a>
+                        <a href="#" onclick="switchLanguage('en')" data-lang-btn="en">ENG</a>
+                    </li>
+                </ul>
+
+                <a href="tel:+37253666018" class="emergency-btn">
+                    <i class="fas fa-phone"></i>
+                    <span class="lang-content active" data-lang="et">Kiire abi</span>
+                    <span class="lang-content" data-lang="ru">Срочно</span>
+                    <span class="lang-content" data-lang="en">Emergency</span>
+                </a>
+
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    <span class="lang-content active" data-lang="et">Kiire Lukusepateenus</span>
+                    <span class="lang-content" data-lang="ru">Быстрая Слесарная Помощь</span>
+                    <span class="lang-content" data-lang="en">Fast Locksmith Service</span>
+                </h1>
+                <p>
+                    <span class="lang-content active" data-lang="et">Professionaalne lukude avamine, paigaldamine ja remont Tallinnas ja Harjumaal</span>
+                    <span class="lang-content" data-lang="ru">Профессиональное вскрытие, установка и ремонт замков в Таллинне и Харьюмаа</span>
+                    <span class="lang-content" data-lang="en">Professional lock opening, installation and repair in Tallinn and Harjumaa</span>
+                </p>
+
+                <div class="emergency-info">
+                    <a href="tel:+37253666018" class="emergency-phone">
+                        <i class="fas fa-phone-alt"></i>
+                        +372 53 666 018
+                    </a>
+                    <div class="work-hours">
+                        <i class="fas fa-clock"></i>
+                        <span class="lang-content active" data-lang="et">Tööajad: E-R 9:00 - 17:00</span>
+                        <span class="lang-content" data-lang="ru">Рабочие часы: Пн-Пт 9:00 - 17:00</span>
+                        <span class="lang-content" data-lang="en">Working hours: Mon-Fri 9:00 AM - 5:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="et">Meie Teenused</span>
+                <span class="lang-content" data-lang="ru">Наши Услуги</span>
+                <span class="lang-content" data-lang="en">Our Services</span>
+            </h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-door-open"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="et">Lukude Avamine</span>
+                        <span class="lang-content" data-lang="ru">Вскрытие Замков</span>
+                        <span class="lang-content" data-lang="en">Lock Opening</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Professionaalne ja kiire lukude avamine ilma kahjustamiseta. Töötame kõigi lukutüüpidega.</span>
+                        <span class="lang-content" data-lang="ru">Профессиональное и быстрое вскрытие замков без повреждений. Работаем со всеми типами замков.</span>
+                        <span class="lang-content" data-lang="en">Professional and fast lock opening without damage. We work with all types of locks.</span>
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="et">Paigaldamine</span>
+                        <span class="lang-content" data-lang="ru">Установка</span>
+                        <span class="lang-content" data-lang="en">Installation</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Uute lukude paigaldamine ja vanade asendamine. Kasutame kvaliteetseid materjale ja anname garantii.</span>
+                        <span class="lang-content" data-lang="ru">Установка новых замков и замена старых. Используем качественные материалы и даем гарантию.</span>
+                        <span class="lang-content" data-lang="en">Installation of new locks and replacement of old ones. We use quality materials and provide warranty.</span>
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="et">Remont</span>
+                        <span class="lang-content" data-lang="ru">Ремонт</span>
+                        <span class="lang-content" data-lang="en">Repair</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Lukude remont ja hooldus. Parandame kõik lukutüübid ja anname nõu edaspidiseks hoolduseks.</span>
+                        <span class="lang-content" data-lang="ru">Ремонт и обслуживание замков. Ремонтируем все типы замков и даем советы по дальнейшему обслуживанию.</span>
+                        <span class="lang-content" data-lang="en">Lock repair and maintenance. We repair all lock types and provide advice for future maintenance.</span>
+                    </p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>
+                        <span class="lang-content active" data-lang="et">Turvakonsultatsioon</span>
+                        <span class="lang-content" data-lang="ru">Консультация по Безопасности</span>
+                        <span class="lang-content" data-lang="en">Security Consultation</span>
+                    </h3>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Anname nõu turvasüsteemide valikul ja paigaldamisel. Aitame leida parimad lahendused teie kodule.</span>
+                        <span class="lang-content" data-lang="ru">Консультируем по выбору и установке систем безопасности. Поможем найти лучшие решения для вашего дома.</span>
+                        <span class="lang-content" data-lang="en">We advise on the selection and installation of security systems. Help find the best solutions for your home.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="why-choose">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="et">Miks Valida Meid?</span>
+                <span class="lang-content" data-lang="ru">Почему Выбрать Нас?</span>
+                <span class="lang-content" data-lang="en">Why Choose Us?</span>
+            </h2>
+
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Kiire Teenus</span>
+                        <span class="lang-content" data-lang="ru">Быстрый Сервис</span>
+                        <span class="lang-content" data-lang="en">Fast Service</span>
+                    </h4>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Jõuame kohale 30 minuti jooksul Tallinna piires</span>
+                        <span class="lang-content" data-lang="ru">Прибываем в течение 30 минут в пределах Таллинна</span>
+                        <span class="lang-content" data-lang="en">We arrive within 30 minutes in Tallinn area</span>
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Professionaalne</span>
+                        <span class="lang-content" data-lang="ru">Профессиональный</span>
+                        <span class="lang-content" data-lang="en">Professional</span>
+                    </h4>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Kogenud meistrid ja kaasaegsed tööriistad</span>
+                        <span class="lang-content" data-lang="ru">Опытные мастера и современные инструменты</span>
+                        <span class="lang-content" data-lang="en">Experienced craftsmen and modern tools</span>
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-euro-sign"></i>
+                    </div>
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Ausad Hinnad</span>
+                        <span class="lang-content" data-lang="ru">Честные Цены</span>
+                        <span class="lang-content" data-lang="en">Fair Prices</span>
+                    </h4>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Läbipaistvad hinnad ilma varjatud kuludeta</span>
+                        <span class="lang-content" data-lang="ru">Прозрачные цены без скрытых расходов</span>
+                        <span class="lang-content" data-lang="en">Transparent prices without hidden costs</span>
+                    </p>
+                </div>
+
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Garantii</span>
+                        <span class="lang-content" data-lang="ru">Гарантия</span>
+                        <span class="lang-content" data-lang="en">Warranty</span>
+                    </h4>
+                    <p>
+                        <span class="lang-content active" data-lang="et">12 kuu garantii kõigile teenustele</span>
+                        <span class="lang-content" data-lang="ru">12 месяцев гарантии на все услуги</span>
+                        <span class="lang-content" data-lang="en">12 months warranty on all services</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="lang-content active" data-lang="et">Võta Ühendust</span>
+                <span class="lang-content" data-lang="ru">Свяжитесь С Нами</span>
+                <span class="lang-content" data-lang="en">Get In Touch</span>
+            </h2>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>
+                                <span class="lang-content active" data-lang="et">Telefon</span>
+                                <span class="lang-content" data-lang="ru">Телефон</span>
+                                <span class="lang-content" data-lang="en">Phone</span>
+                            </h4>
+                            <p><a href="tel:+37253666018">+372 53 666 018</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>
+                                <span class="lang-content active" data-lang="et">E-post</span>
+                                <span class="lang-content" data-lang="ru">Email</span>
+                                <span class="lang-content" data-lang="en">Email</span>
+                            </h4>
+                            <p><a href="mailto:info@lukuabi123.ee">info@lukuabi123.ee</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>
+                                <span class="lang-content active" data-lang="et">Teeninduspiirkond</span>
+                                <span class="lang-content" data-lang="ru">Зона Обслуживания</span>
+                                <span class="lang-content" data-lang="en">Service Area</span>
+                            </h4>
+                            <p>
+                                <span class="lang-content active" data-lang="et">Tallinn ja Harjumaa</span>
+                                <span class="lang-content" data-lang="ru">Таллинн и Харьюмаа</span>
+                                <span class="lang-content" data-lang="en">Tallinn and Harjumaa</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>
+                                <span class="lang-content active" data-lang="et">Tööajad</span>
+                                <span class="lang-content" data-lang="ru">Рабочие Часы</span>
+                                <span class="lang-content" data-lang="en">Working Hours</span>
+                            </h4>
+                            <p>
+                                <span class="lang-content active" data-lang="et">E-R: 9:00 - 17:00</span>
+                                <span class="lang-content" data-lang="ru">Пн-Пт: 9:00 - 17:00</span>
+                                <span class="lang-content" data-lang="en">Mon-Fri: 9:00 AM - 5:00 PM</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>
+                        <span class="lang-content active" data-lang="et">Saada Sõnum</span>
+                        <span class="lang-content" data-lang="ru">Отправить Сообщение</span>
+                        <span class="lang-content" data-lang="en">Send Message</span>
+                    </h3>
+                    
+                    <form action="#" method="POST">
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="et">Nimi</span>
+                                <span class="lang-content" data-lang="ru">Имя</span>
+                                <span class="lang-content" data-lang="en">Name</span>
+                            </label>
+                            <input type="text" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="et">Telefon</span>
+                                <span class="lang-content" data-lang="ru">Телефон</span>
+                                <span class="lang-content" data-lang="en">Phone</span>
+                            </label>
+                            <input type="tel" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="et">E-post</span>
+                                <span class="lang-content" data-lang="ru">Email</span>
+                                <span class="lang-content" data-lang="en">Email</span>
+                            </label>
+                            <input type="email" name="email">
+                        </div>
+
+                        <div class="form-group">
+                            <label>
+                                <span class="lang-content active" data-lang="et">Sõnum</span>
+                                <span class="lang-content" data-lang="ru">Сообщение</span>
+                                <span class="lang-content" data-lang="en">Message</span>
+                            </label>
+                            <textarea name="message" rows="4" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="lang-content active" data-lang="et">Saada Sõnum</span>
+                            <span class="lang-content" data-lang="ru">Отправить</span>
+                            <span class="lang-content" data-lang="en">Send Message</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Lukuabi123</h4>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Professionaalne lukusepateenus Tallinnas ja Harjumaal. Kiire, usaldusväärne ja soodne.</span>
+                        <span class="lang-content" data-lang="ru">Профессиональная слесарная служба в Таллинне и Харьюмаа. Быстро, надежно и доступно.</span>
+                        <span class="lang-content" data-lang="en">Professional locksmith service in Tallinn and Harjumaa. Fast, reliable and affordable.</span>
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Kiirvalik</span>
+                        <span class="lang-content" data-lang="ru">Быстрые Ссылки</span>
+                        <span class="lang-content" data-lang="en">Quick Links</span>
+                    </h4>
+                    <p><a href="#services">
+                        <span class="lang-content active" data-lang="et">Teenused</span>
+                        <span class="lang-content" data-lang="ru">Услуги</span>
+                        <span class="lang-content" data-lang="en">Services</span>
+                    </a></p>
+                    <p><a href="#about">
+                        <span class="lang-content active" data-lang="et">Meist</span>
+                        <span class="lang-content" data-lang="ru">О нас</span>
+                        <span class="lang-content" data-lang="en">About</span>
+                    </a></p>
+                    <p><a href="#contact">
+                        <span class="lang-content active" data-lang="et">Kontakt</span>
+                        <span class="lang-content" data-lang="ru">Контакты</span>
+                        <span class="lang-content" data-lang="en">Contact</span>
+                    </a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>
+                        <span class="lang-content active" data-lang="et">Kontakt</span>
+                        <span class="lang-content" data-lang="ru">Контакты</span>
+                        <span class="lang-content" data-lang="en">Contact</span>
+                    </h4>
+                    <p><a href="tel:+37253666018">+372 53 666 018</a></p>
+                    <p><a href="mailto:info@lukuabi123.ee">info@lukuabi123.ee</a></p>
+                    <p>
+                        <span class="lang-content active" data-lang="et">Tallinn ja Harjumaa</span>
+                        <span class="lang-content" data-lang="ru">Таллинн и Харьюмаа</span>
+                        <span class="lang-content" data-lang="en">Tallinn and Harjumaa</span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://instagram.com/lukuabi123.ee" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UCGvCNdgnE3oaSmphq-zXVtg" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lukuabi123. 
+                    <span class="lang-content active" data-lang="et">Kõik õigused kaitstud.</span>
+                    <span class="lang-content" data-lang="ru">Все права защищены.</span>
+                    <span class="lang-content" data-lang="en">All rights reserved.</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        function switchLanguage(lang) {
+            // Hide all language content
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // Show selected language content
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.classList.add('active');
+            });
+
+            // Update language buttons
+            document.querySelectorAll('[data-lang-btn]').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang-btn="${lang}"]`).classList.add('active');
+
+            // Store language preference
+            localStorage.setItem('lukuabi-lang', lang);
+
+            // Update page language
+            document.documentElement.lang = lang;
+        }
+
+        // Load saved language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('lukuabi-lang');
+            if (savedLang) {
+                switchLanguage(savedLang);
+            }
+
+            // Mobile menu functionality
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // Close mobile menu when clicking a link
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Header scroll effect
+            let lastScrollTop = 0;
+            const header = document.querySelector('.header');
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.backdropFilter = 'blur(10px)';
+                } else {
+                    header.style.background = 'var(--white)';
+                    header.style.backdropFilter = 'none';
+                }
+                
+                lastScrollTop = scrollTop;
+            });
+        });
+
+        // Form submission handler
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get current language
+            const currentLang = document.querySelector('.lang-switcher .active').getAttribute('data-lang-btn');
+            
+            // Show success message based on language
+            const messages = {
+                'et': 'Täname! Teie sõnum on saadetud. Võtame teiega peagi ühendust.',
+                'ru': 'Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.',
+                'en': 'Thank you! Your message has been sent. We will contact you soon.'
+            };
+            
+            alert(messages[currentLang] || messages['et']);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
